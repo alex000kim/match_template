@@ -7,7 +7,7 @@ using namespace std;
 using namespace cv;
 
 
-int correlate(String src_image, String templ_image, float &dx, float &dy, float &h) {
+int match(String src_image, String templ_image, float &dx, float &dy, float &h) {
     float h_i, h_j, h_new;
     Mat src_img_data;
     Mat teml_img_data;
@@ -86,7 +86,7 @@ int main(int argc, char **argv) {
     float dx, dy, h;
     String src_image = argv[1];
     String templ_image = argv[2];
-    correlate(src_image, templ_image, dx, dy, h);
+    match(src_image, templ_image, dx, dy, h);
     std::cout << dx << " " << dy << std::endl;
     return 0;
 }
